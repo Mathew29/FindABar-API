@@ -24,7 +24,8 @@ $(document).ready(function() {
         $("#output").append(`<h1> Brew Type: ${bar.brewery_type}</h1>`);
         $("#output").append(`<h1> Street Adress: ${bar.street}</h1>`);
         $("#output").append(`<h1> City: ${bar.city}</h1>`);
-        $("#output").append(`<h1> State: ${bar.state}</h1><br><br>`);
+        $("#output").append(`<h1> State: ${bar.state}</h1>`);
+        $("#output").append(`<h1> Phone-Number: ${bar.phone}</h1><br><br>`);
 
         //   $("#output").html(`<h1> ${body}</h1>`)
 
