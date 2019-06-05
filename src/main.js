@@ -7,13 +7,17 @@ import { FindABar } from './findABar';
 $(document).ready(function() {
   $('#bar').submit(function(event) {
     event.preventDefault();
-    let userInput = $('#userInput').val();
-    $('#userInput').val("");
+    let state = $('#state').val();
+    let name = $('#name').val();
+    let city = $('#city').val();
+    $('#state').val("");
+    $('#name').val("");
+    $('#city').val("");
 
     let findABar = new FindABar();  // create instance of WeatherService class
-    findABar.getBar(userInput).then((response) => {
+    findABar.getBar(state, name, city).then((response) => {
       let text = JSON.parse(response);
-      $("#output").append(`<h1>The search for ${userInput} found these bars:</h1><br>`);
+      $("#output").append(`<h1>Bar Search Results:</h1><br>`);
       text.forEach((bar) => {
         console.log(bar);
         $("#output").append(`<h1> Name: ${bar.name}</h1>`);
